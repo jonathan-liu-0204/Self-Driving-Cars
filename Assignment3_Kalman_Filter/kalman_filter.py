@@ -14,10 +14,10 @@ class KalmanFilter():
                            [0, 1, 0]])
                 
         # State transition error covariance
-        self.Q = np.eye(2)
+        self.Q = np.eye(2)*0.08
 
         # Measurement error
-        self.R = np.eye(3)
+        self.R = np.eye(3)*0.0009
 
     def predict(self, u):
         self.x = np.dot(self.A, self.x) + np.dot(self.B, u)
