@@ -14,20 +14,17 @@ class KalmanFilter():
                            [0, 1, 0]])
                 
         # State transition error covariance
-        # self.Q = np.eye(3)*0.0009
         self.Q = np.array([[0.08, 0.0, 0.0],
                            [0.0, 0.009, 0.0], 
                            [0.0, 0.0, 1.0]])
 
         # Measurement error
-        #self.R = np.eye(2)*0.08
         self.R = np.array([[0.5, 0.00],
                            [0.00, 0.7]])
 
     def predict(self, u):
         self.x = np.dot(self.A, self.x) + np.dot(self.B, u)
         self.P = np.dot(np.dot(self.A, self.P), self.A.T) + self.Q
-        # raise NotImplementedError
 
     def update(self, z):
         
@@ -37,7 +34,5 @@ class KalmanFilter():
         self.x = self.x + np.dot(K, y)
 
         I = np.eye(3)
-        # self.P = np.dot(I - np.dot(K, self.H), self.P)
         self.P = np.dot(I - np.dot(K, self.H), self.P)
         return self.x, self.P
-        # raise NotImplementedError
