@@ -38,6 +38,6 @@ class KalmanFilter():
 
         I = np.eye(3)
         # self.P = np.dot(I - np.dot(K, self.H), self.P)
-        self.P = np.dot(np.dot(I - np.dot(K, self.H), self.P), (I - np.dot(K, self.H)).T) + np.dot(np.dot(K, self.R), K.T)
+        self.P = np.dot(I - np.dot(K, self.H), self.P)
         return self.x, self.P
         # raise NotImplementedError
