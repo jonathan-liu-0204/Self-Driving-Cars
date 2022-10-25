@@ -42,44 +42,58 @@ class Fusion:
         if self.step == 1:
             self.init_KF(measurement[0], measurement[1], 0)
         else:
-            self.KF.R = ???
-            self.KF.update(z = ???)
+            #===================================
+            self.KF.R = np.eye(2)*0.005
+            self.KF.update(z = [measurement[0], measurement[1]]
+            #===================================
         print(f"estimation: {self.KF.x}")
 
     def odometryCallback(self, data):
         self.step += 1
+        #===================================
+        #TODO
         # Read radar odometry data from ros msg
-        position = ???
+        position = [data.pose.pose.position.x, data.pose.pose.position.y]
+        #===================================
         odometry_covariance = np.array(data.pose.covariance).reshape(6, -1)[:2,:2]
 
+        #===================================
+        #TODO
         # Get euler angle from quaternion
-        roll, pitch, yaw = euler_from_quaternion(???)
+        roll, pitch, yaw = euler_from_quaternion[data.pose.pose.orientation.x, data.pose.pose.orientation.y, data.pose.pose.orientation.z, data.pose.pose.orientation.w]
 
         # Calculate odometry difference
-        diff = ???
-        diff_yaw = ???
+        diff = [position[0] - self.last_odometry_position[0], position[1] - self.last_odometry_position[1]]
+        diff_yaw = yaw - self.last_odometry_angle
+        #===================================
 
         # KF predict
         if self.step == 1:
             self.init_KF(position[0], position[1], 0)
         else:
-            self.KF.R = ???
-            self.KF.predict(u = ???)
+            #===================================
+            #TODO
+            self.KF.R = np.eye(2)
+            self.KF.predict(u = [diff[0], diff[1], diff_yaw])
+            #===================================
         print(f"estimation: {self.KF.x}")
         self.last_odometry_position = position
         self.last_odometry_angle = yaw
 
-        quaternion = quaternion_from_euler(0, 0, ???)
+        #===================================
+        #TODO
+        quaternion = quaternion_from_euler(0, 0, yaw)
 
-        # Publish odometry with covariance
+        # Publish odometry with covariancess
         predPose = Odometry()
         predPose.header.frame_id = 'origin'
-        predPose.pose.pose.position.x = ???
-        predPose.pose.pose.position.y = ???
-        predPose.pose.pose.orientation.x = ???
-        predPose.pose.pose.orientation.y = ???
-        predPose.pose.pose.orientation.z = ???
-        predPose.pose.pose.orientation.w = ???
+        predPose.pose.pose.position.x = self.KF.x[0]
+        predPose.pose.pose.position.y = self.KF.x[1]
+        predPose.pose.pose.orientation.x = quaternion[0]
+        predPose.pose.pose.orientation.y = quaternion[1]
+        predPose.pose.pose.orientation.z = quaternion[2]
+        predPose.pose.pose.orientation.w = quaternion[3]
+        #===================================
         predPose.pose.covariance = [self.KF.P[0][0], self.KF.P[0][1],0,0,0,0,
                                     self.KF.P[1][0], self.KF.P[1][1],0,0,0,0,
                                     0,0,0,0,0,0,
@@ -113,8 +127,11 @@ class Fusion:
     def init_KF(self, x, y, yaw):
         # Initialize the Kalman filter when the first data comes in
         self.KF = KalmanFilter(x = x, y = y, yaw = yaw)
-        self.KF.A = ???
-        self.KF.B = ???
+        #===================================
+        #TODO
+        self.KF.A = np.identity(3)
+        self.KF.B = np.identity(3)
+        #===================================
 
 if __name__ == '__main__':
     rospy.init_node('kf', anonymous=True)
