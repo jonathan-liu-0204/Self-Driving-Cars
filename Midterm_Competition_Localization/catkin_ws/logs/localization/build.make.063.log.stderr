@@ -1,0 +1,858 @@
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:[m[K In member function ‘[01m[KEigen::Matrix4f Localizer::align_map(pcl::PointCloud<pcl::PointXYZI>::Ptr)[m[K’:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:39:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::basic_ostream<char>::__ostream_type[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>[m[K’} and ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’)
+  244 |     [32m[Kstd::cout << "icp: " << std::endl[m[K [01;31m[K<<[m[K [34m[Kicp[m[K << std::endl << std::endl;
+      |     [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^~[m[K [34m[K~~~[m[K
+      |                          [32m[K|[m[K               [34m[K|[m[K
+      |                          [32m[K|[m[K               [34m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K
+      |                          [32m[Kstd::basic_ostream<char>::__ostream_type {aka std::basic_ostream<char>}[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:108:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  108 |       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:108:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>& (*)(std::basic_ostream<char>&)[m[K’}
+  108 |       operator<<([01;36m[K__ostream_type& (*__pf)(__ostream_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:117:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>][m[K’
+  117 |       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:117:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)[m[K’ {aka ‘[01m[Kstd::basic_ios<char>& (*)(std::basic_ios<char>&)[m[K’}
+  117 |       operator<<([01;36m[K__ios_type& (*__pf)(__ios_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:127:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  127 |       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:127:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+  127 |       operator<<([01;36m[Kios_base& (*__pf) (ios_base&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:166:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  166 |       [01;36m[Koperator[m[K<<(long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:166:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Klong int[m[K’
+  166 |       operator<<([01;36m[Klong __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:170:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  170 |       [01;36m[Koperator[m[K<<(unsigned long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:170:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Klong unsigned int[m[K’
+  170 |       operator<<([01;36m[Kunsigned long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:174:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  174 |       [01;36m[Koperator[m[K<<(bool __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:174:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kbool[m[K’
+  174 |       operator<<([01;36m[Kbool __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/ostream:702[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+   91 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/ostream.tcc:92:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kshort int[m[K’
+   92 |     operator<<([01;36m[Kshort __n[m[K)
+      |                [01;36m[K~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:181:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  181 |       [01;36m[Koperator[m[K<<(unsigned short __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:181:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kshort unsigned int[m[K’
+  181 |       operator<<([01;36m[Kunsigned short __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/ostream:702[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+  105 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/ostream.tcc:106:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kint[m[K’
+  106 |     operator<<([01;36m[Kint __n[m[K)
+      |                [01;36m[K~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:192:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  192 |       [01;36m[Koperator[m[K<<(unsigned int __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:192:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kunsigned int[m[K’
+  192 |       operator<<([01;36m[Kunsigned int __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:201:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  201 |       [01;36m[Koperator[m[K<<(long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:201:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Klong long int[m[K’
+  201 |       operator<<([01;36m[Klong long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:205:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  205 |       [01;36m[Koperator[m[K<<(unsigned long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:205:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Klong long unsigned int[m[K’
+  205 |       operator<<([01;36m[Kunsigned long long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:220:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  220 |       [01;36m[Koperator[m[K<<(double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:220:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kdouble[m[K’
+  220 |       operator<<([01;36m[Kdouble __f[m[K)
+      |                  [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:224:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  224 |       [01;36m[Koperator[m[K<<(float __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:224:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kfloat[m[K’
+  224 |       operator<<([01;36m[Kfloat __f[m[K)
+      |                  [01;36m[K~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:232:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  232 |       [01;36m[Koperator[m[K<<(long double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:232:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Klong double[m[K’
+  232 |       operator<<([01;36m[Klong double __f[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/ostream:245:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  245 |       [01;36m[Koperator[m[K<<(const void* __p)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:245:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst void*[m[K’
+  245 |       operator<<([01;36m[Kconst void* __p[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/ostream:702[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>][m[K’
+  119 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/ostream.tcc:120:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type*[m[K’ {aka ‘[01m[Kstd::basic_streambuf<char>*[m[K’}
+  120 |     operator<<([01;36m[K__streambuf_type* __sbin[m[K)
+      |                [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/node_handle.h:52[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h:207:29:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& operator<<(std::ostream&, const XmlRpc::XmlRpcValue&)[m[K’
+  207 | XMLRPCPP_DECL std::ostream& [01;36m[Koperator[m[K<<(std::ostream& os, const XmlRpc::XmlRpcValue& v);
+      |                             [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h:207:85:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst XmlRpc::XmlRpcValue&[m[K’
+  207 | XMLRPCPP_DECL std::ostream& operator<<(std::ostream& os, [01;36m[Kconst XmlRpc::XmlRpcValue& v[m[K);
+      |                                                          [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/point_traits.h:47[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/make_shared.h:47[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:44[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/PCLPointField.h:39:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PCLPointField&)[m[K’
+   39 |   inline std::ostream& [01;36m[Koperator[m[K<<(std::ostream& s, const  ::pcl::PCLPointField & v)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/PCLPointField.h:39:82:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PCLPointField&[m[K’
+   39 |   inline std::ostream& operator<<(std::ostream& s, [01;36m[Kconst  ::pcl::PCLPointField & v[m[K)
+      |                                                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:47[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/pcl_base.h:53[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h:50[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac.h:44[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/ransac.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:45[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/PCLHeader.h:34:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PCLHeader&)[m[K’
+   34 |   inline std::ostream& [01;36m[Koperator[m[K << (std::ostream& out, const PCLHeader &h)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/PCLHeader.h:34:73:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PCLHeader&[m[K’
+   34 |   inline std::ostream& operator << (std::ostream& out, [01;36m[Kconst PCLHeader &h[m[K)
+      |                                                        [01;36m[K~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/pcl_base.h:53[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h:50[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac.h:44[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/ransac.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:45[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:627:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointT> std::ostream& pcl::operator<<(std::ostream&, const pcl::PointCloud<PointT>&)[m[K’
+  627 |   [01;36m[Koperator[m[K << (std::ostream& s, const pcl::PointCloud<PointT> &p)
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/point_cloud.h:627:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kconst pcl::PointCloud<PointT>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/pcl_base.h:54[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h:50[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac.h:44[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/ransac.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:45[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/PointIndices.h:29:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointIndices&)[m[K’
+   29 |   inline std::ostream& [01;36m[Koperator[m[K << (std::ostream& s, const ::pcl::PointIndices &v)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/PointIndices.h:29:81:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointIndices&[m[K’
+   29 |   inline std::ostream& operator << (std::ostream& s, [01;36m[Kconst ::pcl::PointIndices &v[m[K)
+      |                                                      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/pcl_base.h:55[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h:50[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac.h:44[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/ransac.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:45[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/PCLPointCloud2.h:96:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PCLPointCloud2&)[m[K’
+   96 |   inline std::ostream& [01;36m[Koperator[m[K<<(std::ostream& s, const  ::pcl::PCLPointCloud2 &v)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/PCLPointCloud2.h:96:82:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PCLPointCloud2&[m[K’
+   96 |   inline std::ostream& operator<<(std::ostream& s, [01;36m[Kconst  ::pcl::PCLPointCloud2 &v[m[K)
+      |                                                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/conversions.h:48[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/common/concatenate.h:41[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/search/search.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h:56[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac.h:44[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/ransac.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:45[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/PCLImage.h:36:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PCLImage&)[m[K’
+   36 |   inline std::ostream& [01;36m[Koperator[m[K<<(std::ostream& s, const  ::pcl::PCLImage & v)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/PCLImage.h:36:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PCLImage&[m[K’
+   36 |   inline std::ostream& operator<<(std::ostream& s, [01;36m[Kconst  ::pcl::PCLImage & v[m[K)
+      |                                                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/point_types.h:359[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/common/impl/copy_point.hpp:41[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/common/copy_point.h:58[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/search/search.h:44[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model.h:56[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac.h:44[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/ransac.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:45[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:310:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZ&)[m[K’
+  310 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZ& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:287:76:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZ&[m[K’
+  287 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZ& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:364:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::RGB&)[m[K’
+  364 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const RGB& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:323:71:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::RGB&[m[K’
+  323 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst RGB& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:389:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Intensity&)[m[K’
+  389 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Intensity& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:372:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Intensity&[m[K’
+  372 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Intensity& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:422:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Intensity8u&)[m[K’
+  422 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Intensity8u& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:398:79:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Intensity8u&[m[K’
+  398 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Intensity8u& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:447:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Intensity32u&)[m[K’
+  447 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Intensity32u& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:430:80:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Intensity32u&[m[K’
+  430 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Intensity32u& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:488:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZI&)[m[K’
+  488 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZI& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:467:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZI&[m[K’
+  467 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZI& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:515:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZL&)[m[K’
+  515 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZL& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:499:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZL&[m[K’
+  499 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZL& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:524:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Label&)[m[K’
+  524 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Label& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:519:73:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Label&[m[K’
+  519 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Label& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:572:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGBA&)[m[K’
+  572 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZRGBA& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:535:80:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZRGBA&[m[K’
+  535 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZRGBA& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:648:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGB&)[m[K’
+  648 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZRGB& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:591:79:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZRGB&[m[K’
+  591 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZRGB& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:682:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGBL&)[m[K’
+  682 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZRGBL& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:653:80:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZRGBL&[m[K’
+  653 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZRGBL& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:726:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZHSV&)[m[K’
+  726 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZHSV& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:703:79:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZHSV&[m[K’
+  703 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZHSV& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:741:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXY&)[m[K’
+  741 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXY& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:732:75:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXY&[m[K’
+  732 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXY& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:754:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointUV&)[m[K’
+  754 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointUV& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:744:75:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointUV&[m[K’
+  744 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointUV& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:774:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::InterestPoint&)[m[K’
+  774 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const InterestPoint& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:757:81:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::InterestPoint&[m[K’
+  757 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst InterestPoint& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:817:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Normal&)[m[K’
+  817 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Normal& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:791:74:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Normal&[m[K’
+  791 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Normal& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:851:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Axis&)[m[K’
+  851 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Axis& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:828:72:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Axis&[m[K’
+  828 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Axis& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:892:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointNormal&)[m[K’
+  892 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointNormal& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:871:79:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointNormal&[m[K’
+  871 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointNormal& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:963:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGBNormal&)[m[K’
+  963 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZRGBNormal& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:913:85:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZRGBNormal&[m[K’
+  913 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZRGBNormal& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1005:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZINormal&)[m[K’
+ 1005 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZINormal& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:982:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZINormal&[m[K’
+  982 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZINormal& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1048:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZLNormal&)[m[K’
+ 1048 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointXYZLNormal& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1025:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointXYZLNormal&[m[K’
+ 1025 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointXYZLNormal& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1087:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointWithRange&)[m[K’
+ 1087 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointWithRange& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1068:82:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointWithRange&[m[K’
+ 1068 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointWithRange& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1127:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointWithViewpoint&)[m[K’
+ 1127 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointWithViewpoint& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1107:86:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointWithViewpoint&[m[K’
+ 1107 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointWithViewpoint& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1138:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::MomentInvariants&)[m[K’
+ 1138 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const MomentInvariants& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1130:84:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::MomentInvariants&[m[K’
+ 1130 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst MomentInvariants& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1149:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PrincipalRadiiRSD&)[m[K’
+ 1149 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PrincipalRadiiRSD& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1141:85:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PrincipalRadiiRSD&[m[K’
+ 1141 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PrincipalRadiiRSD& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1167:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Boundary&)[m[K’
+ 1167 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Boundary& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1152:76:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Boundary&[m[K’
+ 1152 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Boundary& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1189:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PrincipalCurvatures&)[m[K’
+ 1189 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PrincipalCurvatures& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1170:87:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PrincipalCurvatures&[m[K’
+ 1170 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PrincipalCurvatures& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1201:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PFHSignature125&)[m[K’
+ 1201 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PFHSignature125& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1192:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PFHSignature125&[m[K’
+ 1192 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PFHSignature125& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1213:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PFHRGBSignature250&)[m[K’
+ 1213 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PFHRGBSignature250& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1204:86:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PFHRGBSignature250&[m[K’
+ 1204 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PFHRGBSignature250& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1225:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PPFSignature&)[m[K’
+ 1225 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PPFSignature& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1216:80:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PPFSignature&[m[K’
+ 1216 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PPFSignature& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1237:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::CPPFSignature&)[m[K’
+ 1237 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const CPPFSignature& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1228:81:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::CPPFSignature&[m[K’
+ 1228 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst CPPFSignature& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1250:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PPFRGBSignature&)[m[K’
+ 1250 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PPFRGBSignature& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1240:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PPFRGBSignature&[m[K’
+ 1240 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PPFRGBSignature& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1262:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::NormalBasedSignature12&)[m[K’
+ 1262 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const NormalBasedSignature12& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1253:90:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::NormalBasedSignature12&[m[K’
+ 1253 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst NormalBasedSignature12& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1275:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::ShapeContext1980&)[m[K’
+ 1275 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const ShapeContext1980& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1265:84:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::ShapeContext1980&[m[K’
+ 1265 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst ShapeContext1980& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1288:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::UniqueShapeContext1960&)[m[K’
+ 1288 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const UniqueShapeContext1960& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1278:90:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::UniqueShapeContext1960&[m[K’
+ 1278 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst UniqueShapeContext1960& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1301:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::SHOT352&)[m[K’
+ 1301 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const SHOT352& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1291:75:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::SHOT352&[m[K’
+ 1291 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst SHOT352& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1315:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::SHOT1344&)[m[K’
+ 1315 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const SHOT1344& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1305:76:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::SHOT1344&[m[K’
+ 1305 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst SHOT1344& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1362:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::ReferenceFrame&)[m[K’
+ 1362 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const ReferenceFrame& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1347:82:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::ReferenceFrame&[m[K’
+ 1347 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst ReferenceFrame& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1376:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::FPFHSignature33&)[m[K’
+ 1376 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const FPFHSignature33& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1367:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::FPFHSignature33&[m[K’
+ 1367 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst FPFHSignature33& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1388:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::VFHSignature308&)[m[K’
+ 1388 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const VFHSignature308& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1379:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::VFHSignature308&[m[K’
+ 1379 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst VFHSignature308& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1400:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::GRSDSignature21&)[m[K’
+ 1400 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const GRSDSignature21& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1391:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::GRSDSignature21&[m[K’
+ 1391 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst GRSDSignature21& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1414:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::BRISKSignature512&)[m[K’
+ 1414 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const BRISKSignature512& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1403:85:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::BRISKSignature512&[m[K’
+ 1403 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst BRISKSignature512& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1426:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::ESFSignature640&)[m[K’
+ 1426 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const ESFSignature640& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1417:83:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::ESFSignature640&[m[K’
+ 1417 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst ESFSignature640& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1438:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::GASDSignature512&)[m[K’
+ 1438 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const GASDSignature512& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1429:84:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::GASDSignature512&[m[K’
+ 1429 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst GASDSignature512& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1450:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::GASDSignature984&)[m[K’
+ 1450 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const GASDSignature984& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1441:84:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::GASDSignature984&[m[K’
+ 1441 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst GASDSignature984& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1462:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::GASDSignature7992&)[m[K’
+ 1462 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const GASDSignature7992& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1453:85:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::GASDSignature7992&[m[K’
+ 1453 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst GASDSignature7992& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1474:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::GFPFHSignature16&)[m[K’
+ 1474 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const GFPFHSignature16& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1465:84:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::GFPFHSignature16&[m[K’
+ 1465 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst GFPFHSignature16& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1487:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Narf36&)[m[K’
+ 1487 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Narf36& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1477:74:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Narf36&[m[K’
+ 1477 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Narf36& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1500:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::BorderDescription&)[m[K’
+ 1500 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const BorderDescription& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1490:85:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::BorderDescription&[m[K’
+ 1490 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst BorderDescription& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1521:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::IntensityGradient&)[m[K’
+ 1521 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const IntensityGradient& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1504:85:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::IntensityGradient&[m[K’
+ 1504 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst IntensityGradient& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1604:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointWithScale&)[m[K’
+ 1604 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointWithScale& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1555:82:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointWithScale&[m[K’
+ 1555 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointWithScale& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1652:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointSurfel&)[m[K’
+ 1652 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointSurfel& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1627:79:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointSurfel&[m[K’
+ 1627 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointSurfel& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1685:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PointDEM&)[m[K’
+ 1685 |     friend std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const PointDEM& p);
+      |                          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1664:76:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PointDEM&[m[K’
+ 1664 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst PointDEM& p[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1689:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<int N> std::ostream& pcl::operator<<(std::ostream&, const pcl::Histogram<N>&)[m[K’
+ 1689 |   [01;36m[Koperator[m[K << (std::ostream& os, const Histogram<N>& p)
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/impl/point_types.hpp:1689:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kconst pcl::Histogram<N>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/common/eigen.h:56[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model_registration.h:48[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:46[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/ModelCoefficients.h:30:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::ModelCoefficients&)[m[K’
+   30 |   inline std::ostream& [01;36m[Koperator[m[K<<(std::ostream& s, const  ::pcl::ModelCoefficients & v)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/ModelCoefficients.h:30:86:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::ModelCoefficients&[m[K’
+   30 |   inline std::ostream& operator<<(std::ostream& s, [01;36m[Kconst  ::pcl::ModelCoefficients & v[m[K)
+      |                                                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/cloud_iterator.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/common/centroid.h:45[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/sample_consensus/sac_model_registration.h:49[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:46[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/correspondence.h:86:29:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Correspondence&)[m[K’
+   86 |   PCL_EXPORTS std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const Correspondence& c);
+      |                             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/correspondence.h:86:82:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Correspondence&[m[K’
+   86 |   PCL_EXPORTS std::ostream& operator << (std::ostream& os, [01;36m[Kconst Correspondence& c[m[K);
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/PolygonMesh.h:11[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:50[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:45[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/search/kdtree.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/registration.h:47[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:47[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/Vertices.h:30:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::Vertices&)[m[K’
+   30 |   inline std::ostream& [01;36m[Koperator[m[K<<(std::ostream& s, const  ::pcl::Vertices & v)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/Vertices.h:30:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::Vertices&[m[K’
+   30 |   inline std::ostream& operator<<(std::ostream& s, [01;36m[Kconst  ::pcl::Vertices & v[m[K)
+      |                                                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:50[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree.h:45[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/kdtree/kdtree_flann.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/search/kdtree.h:43[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/registration.h:47[m[K,
+                 from [01m[K/usr/include/pcl-1.10/pcl/registration/icp.h:47[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:17[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/PolygonMesh.h:104:24:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& pcl::operator<<(std::ostream&, const pcl::PolygonMesh&)[m[K’
+  104 |   inline std::ostream& [01;36m[Koperator[m[K<<(std::ostream& s, const  ::pcl::PolygonMesh &v)
+      |                        [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.10/pcl/PolygonMesh.h:104:79:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ to ‘[01m[Kconst pcl::PolygonMesh&[m[K’
+  104 |   inline std::ostream& operator<<(std::ostream& s, [01;36m[Kconst  ::pcl::PolygonMesh &v[m[K)
+      |                                                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6419:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6419 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6419:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/ios_base.h:46[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/system_error:217:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)[m[K’
+  217 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:217:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kconst std::error_code&[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:506:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)[m[K’
+  506 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:506:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’)
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:511:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)[m[K’
+  511 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:511:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kchar[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:517:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)[m[K’
+  517 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:517:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kchar[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:523:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)[m[K’
+  523 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:523:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Ksigned char[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:528:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)[m[K’
+  528 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:528:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kunsigned char[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:548:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)[m[K’
+  548 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:548:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/ostream:702[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)[m[K’
+  321 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kconst char*[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:565:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)[m[K’
+  565 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:565:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kconst char*[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:578:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)[m[K’
+  578 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:578:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kconst signed char*[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:583:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)[m[K’
+  583 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:583:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kconst unsigned char*[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:1[m[K:
+[01m[K/usr/include/c++/9/ostream:691:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)[m[K’
+  691 |     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/ostream:691:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/c++/9/ostream: In substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = pcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>][m[K’:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K   required from here
+[01m[K/usr/include/c++/9/ostream:691:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, std::basic_ostream<char>&>[m[K’
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:79:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)[m[K’
+   79 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:79:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kstd::_Resetiosflags[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:109:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)[m[K’
+  109 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:109:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kstd::_Setiosflags[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:143:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)[m[K’
+  143 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:143:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kstd::_Setbase[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:178:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)[m[K’
+  178 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:178:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kstd::_Setfill<_CharT>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:208:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)[m[K’
+  208 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:208:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kstd::_Setprecision[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:238:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)[m[K’
+  238 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:238:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((Localizer*)this)->Localizer::icp[m[K’ (type ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’) to type ‘[01m[Kstd::_Setw[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:311:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)[m[K’
+  311 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:311:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kstd::_Put_money<_MoneyT>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/iomanip:363:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)[m[K’
+  363 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/iomanip:363:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kstd::_Put_time<_CharT>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/config/no_tr1/complex.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/complex:552:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)[m[K’
+  552 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/complex:552:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:7[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:66:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+   66 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:66:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/detail/container_fwd.hpp:96[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/unordered/unordered_map.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/unordered_map.hpp:17[m[K,
+                 from [01m[K/opt/ros/noetic/include/tf/tf.h:45[m[K,
+                 from [01m[K/opt/ros/noetic/include/tf/transform_broadcaster.h:36[m[K,
+                 from [01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:11[m[K:
+[01m[K/usr/include/c++/9/bitset:1538:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, long unsigned int _Nb> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bitset<_Nb>&)[m[K’
+ 1538 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bitset:1538:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI>[m[K’ is not derived from ‘[01m[Kconst std::bitset<_Nb>[m[K’
+  244 |     std::cout << "icp: " << std::endl << [01;36m[Kicp[m[K << std::endl << std::endl;
+      |                                          [01;36m[K^~~[m[K
+make[2]: *** [CMakeFiles/localizer.dir/build.make:63: CMakeFiles/localizer.dir/src/localizer_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2056: CMakeFiles/localizer.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

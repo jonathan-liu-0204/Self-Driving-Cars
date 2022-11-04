@@ -1,0 +1,16 @@
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:[m[K In member function ‘[01m[KEigen::Matrix4f Localizer::align_map(pcl::PointCloud<pcl::PointXYZI>::Ptr)[m[K’:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:206:41:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kpcl::VoxelGrid<pcl::PCLPointCloud2> sor[m[K’
+  206 |     pcl::VoxelGrid<pcl::PCLPointCloud2> [01;31m[Ksor[m[K;
+      |                                         [01;31m[K^~~[m[K
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:194:41:[m[K [01;36m[Knote: [m[K‘[01m[Kpcl::VoxelGrid<pcl::PCLPointCloud2> sor[m[K’ previously declared here
+  194 |     pcl::VoxelGrid<pcl::PCLPointCloud2> [01;36m[Ksor[m[K;
+      |                                         [01;36m[K^~~[m[K
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:218:41:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kpcl::VoxelGrid<pcl::PCLPointCloud2> sor[m[K’
+  218 |     pcl::VoxelGrid<pcl::PCLPointCloud2> [01;31m[Ksor[m[K;
+      |                                         [01;31m[K^~~[m[K
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:194:41:[m[K [01;36m[Knote: [m[K‘[01m[Kpcl::VoxelGrid<pcl::PCLPointCloud2> sor[m[K’ previously declared here
+  194 |     pcl::VoxelGrid<pcl::PCLPointCloud2> [01;36m[Ksor[m[K;
+      |                                         [01;36m[K^~~[m[K
+make[2]: *** [CMakeFiles/localizer.dir/build.make:63: CMakeFiles/localizer.dir/src/localizer_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2056: CMakeFiles/localizer.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

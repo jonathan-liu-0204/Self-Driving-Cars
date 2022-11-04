@@ -1,0 +1,7 @@
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:[m[K In member function ‘[01m[KEigen::Matrix4f Localizer::align_map(pcl::PointCloud<pcl::PointXYZI>::Ptr)[m[K’:
+[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:244:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+  244 |     std::cout << "icp: " << std::endl << icp* [01;31m[K<<[m[K std::endl << std::endl;
+      |                                               [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/localizer.dir/build.make:63: CMakeFiles/localizer.dir/src/localizer_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2056: CMakeFiles/localizer.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

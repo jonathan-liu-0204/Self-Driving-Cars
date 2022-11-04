@@ -1,0 +1,7 @@
+localization
+/root/catkin_ws/devel/.private/localization/cmake.lock /root/catkin_ws/devel/./cmake.lock
+/root/catkin_ws/devel/.private/localization/share/localization/cmake/localizationConfig.cmake /root/catkin_ws/devel/share/localization/cmake/localizationConfig.cmake
+/root/catkin_ws/devel/.private/localization/share/localization/cmake/localizationConfig-version.cmake /root/catkin_ws/devel/share/localization/cmake/localizationConfig-version.cmake
+/root/catkin_ws/devel/.private/localization/lib/localization/localizer /root/catkin_ws/devel/lib/localization/localizer
+/root/catkin_ws/devel/.private/localization/lib/localization/pub_map /root/catkin_ws/devel/lib/localization/pub_map
+/root/catkin_ws/devel/.private/localization/lib/pkgconfig/localization.pc /root/catkin_ws/devel/lib/pkgconfig/localization.pc
