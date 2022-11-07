@@ -198,17 +198,17 @@ public:
 
     tmp_scan.setInputCloud(scan_points);
   	tmp_scan.setFilterFieldName("x");
-	  tmp_scan.setFilterLimits(-8.0, 30.0);
+	  // tmp_scan.setFilterLimits(-8.0, 30.0);
     tmp_scan.filter(*filtered_scan_ptr);
 
     tmp_scan.setInputCloud(filtered_scan_ptr);
   	tmp_scan.setFilterFieldName("y");
-	  tmp_scan.setFilterLimits(-15.0, 15.0);
+	  // tmp_scan.setFilterLimits(-15.0, 15.0);
     tmp_scan.filter(*filtered_scan_ptr);
 
     tmp_scan.setInputCloud(filtered_scan_ptr);
     tmp_scan.setFilterFieldName("z");
-	  tmp_scan.setFilterLimits(0.0, 2.5); 
+	  //tmp_scan.setFilterLimits(0.0, 2.5); 
     tmp_scan.filter(*filtered_scan_ptr);
 
     voxel_filter.setInputCloud(scan_points);
