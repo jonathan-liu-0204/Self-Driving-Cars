@@ -218,8 +218,8 @@ public:
 
     std::cout << "Original Map Size: " << map_points->points.size() << std::endl;
     voxel_filter.setInputCloud(map_points);
-    voxel_filter.setLeafSize(0.4f, 0.4f, 0.4f);
-    //voxel_filter.filter(*filtered_map_ptr);
+    //voxel_filter.setLeafSize(0.4f, 0.4f, 0.4f);
+    voxel_filter.filter(*filtered_map_ptr);
     std::cout << "filtered_map_ptr: " << filtered_map_ptr->points.size() << std::endl;
 
 
