@@ -197,28 +197,17 @@ public:
     std::cout << "Original Scan Size: " << scan_points->points.size() << std::endl;
 
     tmp_scan.setInputCloud(scan_points);
-  	tmp_scan.setFilterFieldName("x");
-	  // tmp_scan.setFilterLimits(-8.0, 30.0);
-    tmp_scan.filter(*filtered_scan_ptr);
-
-    tmp_scan.setInputCloud(filtered_scan_ptr);
-  	tmp_scan.setFilterFieldName("y");
-	  // tmp_scan.setFilterLimits(-15.0, 15.0);
-    tmp_scan.filter(*filtered_scan_ptr);
-
-    tmp_scan.setInputCloud(filtered_scan_ptr);
-    tmp_scan.setFilterFieldName("z");
-	  //tmp_scan.setFilterLimits(0.0, 2.5); 
+	  tmp_scan.setFilterLimits(-15.0, 30.0); 
     tmp_scan.filter(*filtered_scan_ptr);
 
     voxel_filter.setInputCloud(scan_points);
-    //voxel_filter.setLeafSize(0.3f, 0.3f, 0.3f);
+    voxel_filter.setLeafSize(0.1f, 0.1f, 0.1f);
     voxel_filter.filter(*filtered_scan_ptr);
     std::cout << "Filtered Scan Size: " << filtered_scan_ptr->points.size() << std::endl;
 
     std::cout << "Original Map Size: " << map_points->points.size() << std::endl;
     voxel_filter.setInputCloud(map_points);
-    //voxel_filter.setLeafSize(0.4f, 0.4f, 0.4f);
+    voxel_filter.setLeafSize(0.3f, 0.3f, 0.3f);
     voxel_filter.filter(*filtered_map_ptr);
     std::cout << "filtered_map_ptr: " << filtered_map_ptr->points.size() << std::endl;
 
@@ -252,8 +241,8 @@ public:
     icp.setInputSource(filtered_scan_ptr);
     icp.setInputTarget(filtered_map_ptr);
 
-    icp.setMaximumIterations(200);
-    icp.setMaxCorrespondenceDistance(10);
+    icp.setMaximumIterations(400);
+    icp.setMaxCorrespondenceDistance(5);
     icp.setTransformationEpsilon(1e-4);
     icp.setEuclideanFitnessEpsilon(1e-4);
     // icp.setRANSACOutlierRejectionThreshold (0.5);
