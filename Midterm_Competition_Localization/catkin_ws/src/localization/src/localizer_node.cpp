@@ -212,14 +212,14 @@ public:
     tmp_scan.filter(*filtered_scan_ptr);
 
     voxel_filter.setInputCloud(scan_points);
-    voxel_filter.setLeafSize(0.3f, 0.3f, 0.3f);
+    //voxel_filter.setLeafSize(0.3f, 0.3f, 0.3f);
     voxel_filter.filter(*filtered_scan_ptr);
     std::cout << "Filtered Scan Size: " << filtered_scan_ptr->points.size() << std::endl;
 
     std::cout << "Original Map Size: " << map_points->points.size() << std::endl;
     voxel_filter.setInputCloud(map_points);
     voxel_filter.setLeafSize(0.4f, 0.4f, 0.4f);
-    voxel_filter.filter(*filtered_map_ptr);
+    //voxel_filter.filter(*filtered_map_ptr);
     std::cout << "filtered_map_ptr: " << filtered_map_ptr->points.size() << std::endl;
 
 
