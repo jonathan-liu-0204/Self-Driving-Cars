@@ -242,8 +242,8 @@ public:
     icp.setInputTarget(filtered_map_ptr);
 
     icp.setMaximumIterations(400);
-    icp.setMaxCorrespondenceDistance(5);
-    icp.setTransformationEpsilon(1e-4);
+    icp.setMaxCorrespondenceDistance(2);
+    icp.setTransformationEpsilon(5e-3);
     icp.setEuclideanFitnessEpsilon(1e-4);
     // icp.setRANSACOutlierRejectionThreshold (0.5);
     icp.align(*transformed_scan_ptr, init_guess);
