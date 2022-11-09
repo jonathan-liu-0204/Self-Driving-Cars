@@ -20,6 +20,8 @@
 #include<pcl_ros/transforms.h>
 #include <pcl/filters/passthrough.h>
 
+#include<sensor_msgs/Imu.h>
+
 class Localizer{
 private:
 
@@ -27,7 +29,7 @@ private:
   std::vector<float> d_max_list, n_iter_list;
 
   ros::NodeHandle _nh;
-  ros::Subscriber sub_map, sub_points, sub_gps;
+  ros::Subscriber sub_map, sub_points, sub_gps, sub_imu;
   ros::Publisher pub_points, pub_pose, pub_test;
   tf::TransformBroadcaster br;
 
@@ -35,6 +37,7 @@ private:
   pcl::PointXYZ gps_point;
   bool gps_ready = false, map_ready = false, initialied = false;
   Eigen::Matrix4f init_guess;
+  Eigen::Matrix3f eigen_C_now;
   int cnt = 0;
   
   pcl::IterativeClosestPoint<pcl::PointXYZI, pcl::PointXYZI> icp;
@@ -79,6 +82,7 @@ public:
     sub_map = _nh.subscribe("/map", 1, &Localizer::map_callback, this);
     sub_points = _nh.subscribe("/lidar_points", 400, &Localizer::pc_callback, this);
     sub_gps = _nh.subscribe("/gps", 1, &Localizer::gps_callback, this);
+    sub_imu = _nh.subscribe("/imu/data", 1, &Localizer::imu_callback, this);
     pub_points = _nh.advertise<sensor_msgs::PointCloud2>("/transformed_points", 1);
     pub_pose = _nh.advertise<geometry_msgs::PoseStamped>("/lidar_pose", 1);
     pub_test = _nh.advertise<sensor_msgs::PointCloud2>("/test_points", 1);
@@ -89,6 +93,28 @@ public:
   // Gentaly end the node
   ~Localizer(){
     if(outfile.is_open()) outfile.close();
+  }
+
+  void imu_callback(const sensor_msgs::Imu::ConstPtr& imu_msg){
+    ROS_INFO("Got imu message");
+    float dt = 0.1;
+    float wx = imu_msg->angular_velocity.x;
+    float wy = imu_msg->angular_velocity.y;
+    float wz = imu_msg->angular_velocity.z;
+    float sigma = sqrt(wx*wx + wy*wy + wz*wz)*dt;
+    Eigen::Matrix3f B;
+    B <<      0, -wz*dt,  wy*dt,
+          wz*dt,      0, -wx*dt,
+         -wy*dt,  wx*dt,      0;
+    
+    tf::Matrix3x3 C_now;
+    Eigen::Vector3f ea;
+    Eigen::Matrix3f eigen_C_next;
+
+    double roll, pitch, yaw;
+    eigen_C_next = eigen_C_now*(Eigen::Matrix3f::Identity(3,3) + sin(sigma)/sigma*B + (1-cos(sigma))/sigma/sigma*B*B);
+    // imu_t_old = imu_t_now;
+    init_guess.topLeftCorner<3,3>() = eigen_C_next;
   }
 
   void map_callback(const sensor_msgs::PointCloud2::ConstPtr& msg){
@@ -155,6 +181,10 @@ public:
     mat.getEulerYPR(yaw, pitch, roll);
     outfile << ++cnt << "," << tf_p.translation().x() << "," << tf_p.translation().y() << "," << tf_p.translation().z() << "," << yaw << "," << pitch << "," << roll << std::endl;
 
+    std::cout << std::endl 
+              << "=============================" << std::endl
+              << "  yaw: " << yaw << std::endl 
+              << "=============================" << std::endl << std::endl;
   }
 
   void gps_callback(const geometry_msgs::PointStamped::ConstPtr& msg){
@@ -200,7 +230,7 @@ public:
 	  tmp_scan.setFilterLimits(-15.0, 30.0); 
     tmp_scan.filter(*filtered_scan_ptr);
 
-    voxel_filter.setInputCloud(scan_points);
+    voxel_filter.setInputCloud(filtered_scan_ptr);
     voxel_filter.setLeafSize(0.1f, 0.1f, 0.1f);
     voxel_filter.filter(*filtered_scan_ptr);
     std::cout << "Filtered Scan Size: " << filtered_scan_ptr->points.size() << std::endl;
@@ -221,17 +251,15 @@ public:
 
       yaw = -M_PI * 1.23;
 
-      min_pose(0, 0) = cos(yaw);
-      min_pose(0, 1) = -sin(yaw);
-      min_pose(1, 0) = sin(yaw);
-      min_pose(1, 1) = cos(yaw);
-
-      min_pose(0, 3) = gps_point.x;
-      min_pose(1, 3) = gps_point.y;
-      min_pose(2, 3) = gps_point.z;
+      min_pose << cos(yaw), -sin(yaw), 0.0, gps_point.x, 
+                  sin(yaw),  cos(yaw), 0.0, gps_point.y,
+                       0.0,       0.0, 1.0, gps_point.z,
+                       0.0,       0.0, 0.0,         1.0;
 
       // set initial guess
       init_guess = min_pose;
+      eigen_C_now = init_guess.topLeftCorner<3,3>();
+
       initialied = true;
     }
 	
@@ -241,9 +269,9 @@ public:
     icp.setInputSource(filtered_scan_ptr);
     icp.setInputTarget(filtered_map_ptr);
 
-    icp.setMaximumIterations(400);
+    icp.setMaximumIterations(1000);
     icp.setMaxCorrespondenceDistance(2);
-    icp.setTransformationEpsilon(2.15e-4);
+    icp.setTransformationEpsilon(1e-4);
     icp.setEuclideanFitnessEpsilon(1e-4);
     // icp.setRANSACOutlierRejectionThreshold (0.5);
     icp.align(*transformed_scan_ptr, init_guess);
@@ -262,6 +290,8 @@ public:
     pcl::toROSMsg(*transformed_scan_ptr, *test_msg);
     test_msg->header.frame_id = "world";
     pub_test.publish(test_msg);
+
+    eigen_C_now = result.topLeftCorner<3,3>();
     
 	/* Use result as next initial guess */
     init_guess = result;
