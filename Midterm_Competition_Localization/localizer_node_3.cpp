@@ -222,37 +222,16 @@ public:
 
     /* [Part 1] Perform pointcloud preprocessing here e.g. downsampling use setLeafSize(...) ... */
 
-    //pcl::PassThrough<pcl::PointXYZI> tmp_scan;
-
     std::cout << std::endl << "Original Scan Size: " << scan_points->points.size() << std::endl;
 
-    // tmp_scan.setInputCloud(scan_points);
-	  // tmp_scan.setFilterLimits(-15.0, 30.0); 
-    // tmp_scan.filter(*filtered_scan_ptr);
-
-    // pcl::VoxelGrid<pcl::PCLPointCloud2> reduce_filter;
-    // pcl::PCLPointCloud2::Ptr tmp_scan (new pcl::PCLPointCloud2 ());
-    // pcl::toPCLPointCloud2(*scan_points, *tmp_scan);
-    // reduce_filter.setFilterFieldName ("z");
-    // reduce_filter.setFilterLimits (-5, 7);
-    // reduce_filter.filter (*tmp_scan);
-    // pcl::fromPCLPointCloud2(*tmp_scan, *filtered_scan_ptr);
-
-    pcl::PassThrough<pcl::PointXYZI> pass;
-    pass.setInputCloud(scan_points);
-    pass.setFilterFieldName("z");
-	  pass.setFilterLimits(-5, 7);
-    pass.filter(*filtered_scan_ptr);
-
-    //*filtered_scan_ptr = *scan_points;
-    voxel_filter.setInputCloud(filtered_scan_ptr);
-    voxel_filter.setLeafSize(0.2f, 0.2f, 0.2f);
+    voxel_filter.setInputCloud(scan_points);
+    voxel_filter.setLeafSize(0.4f, 0.4f, 0.4f);
     voxel_filter.filter(*filtered_scan_ptr);
     std::cout << "Filtered Scan Size: " << filtered_scan_ptr->points.size() << std::endl;
 
     std::cout << "Original Map Size: " << map_points->points.size() << std::endl;
     voxel_filter.setInputCloud(map_points);
-    voxel_filter.setLeafSize(0.2f, 0.2f, 0.2f);
+    voxel_filter.setLeafSize(0.4f, 0.4f, 0.4f);
     voxel_filter.filter(*filtered_map_ptr);
     std::cout << "filtered_map_ptr: " << filtered_map_ptr->points.size() << std::endl;
 
@@ -279,7 +258,7 @@ public:
         first_icp.setInputSource(filtered_scan_ptr);
         first_icp.setInputTarget(filtered_map_ptr);
 
-        first_icp.setMaximumIterations(1500);
+        first_icp.setMaximumIterations(2000);
         first_icp.setMaxCorrespondenceDistance(1);
         first_icp.setTransformationEpsilon(1e-10);
         first_icp.setEuclideanFitnessEpsilon(1e-10);
@@ -309,17 +288,10 @@ public:
 	/* [Part 2] Perform ICP here or any other scan-matching algorithm */
 	/* Refer to https://pointclouds.org/documentation/classpcl_1_1_iterative_closest_point.html#details */
 
-    pcl::PassThrough<pcl::PointXYZI> pass2;
-    pass2.setInputCloud(filtered_scan_ptr);
-  	pass2.setFilterFieldName("y");
-    pass2.setFilterLimits(-20, 20);
-    pass2.setFilterLimitsNegative(true);
-    pass2.filter(*filtered_scan_ptr);
-
     icp.setInputSource(filtered_scan_ptr);
     icp.setInputTarget(filtered_map_ptr);
 
-    icp.setMaximumIterations(1200);
+    icp.setMaximumIterations(2500);
     icp.setMaxCorrespondenceDistance(4);
     icp.setTransformationEpsilon(1e-10);
     icp.setEuclideanFitnessEpsilon(1e-10);
