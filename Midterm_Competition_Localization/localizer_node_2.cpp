@@ -230,13 +230,19 @@ public:
 	  // tmp_scan.setFilterLimits(-15.0, 30.0); 
     // tmp_scan.filter(*filtered_scan_ptr);
 
-    pcl::VoxelGrid<pcl::PCLPointCloud2> reduce_filter;
-    pcl::PCLPointCloud2::Ptr tmp_scan (new pcl::PCLPointCloud2 ());
-    pcl::toPCLPointCloud2(*scan_points, *tmp_scan);
-    reduce_filter.setFilterFieldName ("z");
-    reduce_filter.setFilterLimits (-5, 7);
-    reduce_filter.filter (*tmp_scan);
-    pcl::fromPCLPointCloud2(*tmp_scan, *filtered_scan_ptr);
+    // pcl::VoxelGrid<pcl::PCLPointCloud2> reduce_filter;
+    // pcl::PCLPointCloud2::Ptr tmp_scan (new pcl::PCLPointCloud2 ());
+    // pcl::toPCLPointCloud2(*scan_points, *tmp_scan);
+    // reduce_filter.setFilterFieldName ("z");
+    // reduce_filter.setFilterLimits (-5, 7);
+    // reduce_filter.filter (*tmp_scan);
+    // pcl::fromPCLPointCloud2(*tmp_scan, *filtered_scan_ptr);
+
+    pcl::PassThrough<pcl::PointXYZI> pass;
+    pass.setInputCloud(scan_points);
+    pass.setFilterFieldName("z");
+	  pass.setFilterLimits(-5, 7);
+    pass.filter(*filtered_scan_ptr);
 
     //*filtered_scan_ptr = *scan_points;
     voxel_filter.setInputCloud(filtered_scan_ptr);
@@ -273,8 +279,8 @@ public:
         first_icp.setInputSource(filtered_scan_ptr);
         first_icp.setInputTarget(filtered_map_ptr);
 
-        first_icp.setMaximumIterations(2000);
-        first_icp.setMaxCorrespondenceDistance(4);
+        first_icp.setMaximumIterations(3000);
+        first_icp.setMaxCorrespondenceDistance(1);
         first_icp.setTransformationEpsilon(1e-10);
         first_icp.setEuclideanFitnessEpsilon(1e-10);
         //icp.setRANSACOutlierRejectionThreshold(0.02);
@@ -303,10 +309,17 @@ public:
 	/* [Part 2] Perform ICP here or any other scan-matching algorithm */
 	/* Refer to https://pointclouds.org/documentation/classpcl_1_1_iterative_closest_point.html#details */
 
+    pcl::PassThrough<pcl::PointXYZI> pass2;
+    pass2.setInputCloud(filtered_scan_ptr);
+  	pass2.setFilterFieldName("y");
+    pass2.setFilterLimits(-20, 20);
+    pass2.setFilterLimitsNegative(true);
+    pass2.filter(*filtered_scan_ptr);
+
     icp.setInputSource(filtered_scan_ptr);
     icp.setInputTarget(filtered_map_ptr);
 
-    icp.setMaximumIterations(2000);
+    icp.setMaximumIterations(3000);
     icp.setMaxCorrespondenceDistance(4);
     icp.setTransformationEpsilon(1e-10);
     icp.setEuclideanFitnessEpsilon(1e-10);
