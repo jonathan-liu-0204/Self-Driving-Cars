@@ -222,21 +222,7 @@ public:
 
     /* [Part 1] Perform pointcloud preprocessing here e.g. downsampling use setLeafSize(...) ... */
 
-    //pcl::PassThrough<pcl::PointXYZI> tmp_scan;
-
     std::cout << std::endl << "Original Scan Size: " << scan_points->points.size() << std::endl;
-
-    // tmp_scan.setInputCloud(scan_points);
-	  // tmp_scan.setFilterLimits(-15.0, 30.0); 
-    // tmp_scan.filter(*filtered_scan_ptr);
-
-    // pcl::VoxelGrid<pcl::PCLPointCloud2> reduce_filter;
-    // pcl::PCLPointCloud2::Ptr tmp_scan (new pcl::PCLPointCloud2 ());
-    // pcl::toPCLPointCloud2(*scan_points, *tmp_scan);
-    // reduce_filter.setFilterFieldName ("z");
-    // reduce_filter.setFilterLimits (-5, 7);
-    // reduce_filter.filter (*tmp_scan);
-    // pcl::fromPCLPointCloud2(*tmp_scan, *filtered_scan_ptr);
 
     pcl::PassThrough<pcl::PointXYZI> pass;
     pass.setInputCloud(scan_points);
