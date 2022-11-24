@@ -1,2 +1,0 @@
-/home/jonathan/catkin_ws/devel/./cmake.lock 7
-/root/catkin_ws/devel/./cmake.lock 256

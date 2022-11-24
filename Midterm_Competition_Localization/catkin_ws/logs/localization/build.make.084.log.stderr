@@ -1,7 +1,0 @@
-[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:[m[K In member function ‘[01m[KEigen::Matrix4f Localizer::align_map(pcl::PointCloud<pcl::PointXYZI>::Ptr)[m[K’:
-[01m[K/root/catkin_ws/src/localization/src/localizer_node.cpp:273:43:[m[K [01;31m[Kerror: [m[K‘[01m[Ktest_msg[m[K’ was not declared in this scope
-  273 |     pcl::toROSMsg(*transformed_scan_ptr, *[01;31m[Ktest_msg[m[K);
-      |                                           [01;31m[K^~~~~~~~[m[K
-make[2]: *** [CMakeFiles/localizer.dir/build.make:63: CMakeFiles/localizer.dir/src/localizer_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:2056: CMakeFiles/localizer.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

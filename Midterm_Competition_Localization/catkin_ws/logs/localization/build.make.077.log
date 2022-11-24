@@ -1,5 +1,0 @@
-[35m[1mScanning dependencies of target localizer[0m
-[ 50%] Built target pub_map
-[ 75%] [32mBuilding CXX object CMakeFiles/localizer.dir/src/localizer_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /root/catkin_ws/devel/.private/localization/lib/localization/localizer[0m
-[100%] Built target localizer
