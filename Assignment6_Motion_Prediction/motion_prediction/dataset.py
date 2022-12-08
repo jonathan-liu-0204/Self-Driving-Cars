@@ -558,7 +558,7 @@ def plot_argo_scenario(sample):
     ''' History Trajectory '''
     x = sample['x'].reshape(_OBS_STEPS, 6)
     # plt.plot(...)
-    plt.plot(x[:, 0], x[:, 0], "g")
+    plt.plot(x[:, 0], x[:, 1], "g")
     
     ''' Future Trajectory '''
     y = sample['y'].reshape(_PRED_STEPS, 5)
@@ -569,26 +569,27 @@ def plot_argo_scenario(sample):
     lane = sample['lane_graph'].reshape(-1, 10, 2)
     # plt.plot(...)
     for i in range(10):
-        plt.plot(lane[:, i, 0], lane[:, i, 1], "wo", markersize=0.5)
+        plt.plot(lane[:, i, 0], lane[:, i, 1], "wo", markersize=0.8)
 
-    # crosswalk_graph = sample['crosswalk_graph']
+    ''' Lane Polygon '''
+    lane_polygon = sample['lane_polygon']
+    for i in range(21):
+        plt.plot(lane_polygon[:, i, 0], lane_polygon[:, i, 1], "y+", markersize=1)
 
-    # print()
-    # print("Crosswalk 0:")
-    # print(crosswalk_graph[:, 0, 0])
-    # print(crosswalk_graph[:, 0, 1])
-    # plt.plot(crosswalk_graph[:, 0, 0], crosswalk_graph[:, 0, 1], "ys", markersize=1)
+    ''' Corsswalk '''
+    crosswalk_graph = sample['crosswalk_graph']
+    for i in range(2):
+        plt.plot(crosswalk_graph[:, i, 0], crosswalk_graph[:, i, 1], "c*", markersize=2)
 
-    # print()
-    # print("Crosswalk 1")
-    # print(crosswalk_graph[:, 1, 0])
-    # print(crosswalk_graph[:, 1, 1])
-    # plt.plot(crosswalk_graph[:, 1, 0], crosswalk_graph[:, 1, 1], "rs", markersize=1)
+    ''' Neighbor Graph '''
+    neighbor_graph = sample['neighbor_graph']
+    for i in range(11):
+        plt.plot(neighbor_graph[:, i, 0], neighbor_graph[:, i, 1], "m*", markersize=2)
+        plt.plot(neighbor_graph[:, i, 0], neighbor_graph[:, i, 2], "m*", markersize=2)
+        plt.plot(neighbor_graph[:, i, 0], neighbor_graph[:, i, 3], "m*", markersize=2)
+        plt.plot(neighbor_graph[:, i, 0], neighbor_graph[:, i, 4], "m*", markersize=2)
+        plt.plot(neighbor_graph[:, i, 0], neighbor_graph[:, i, 5], "m*", markersize=2)
 
-    # lane_polygon = sample['lane_polygon']
-    # for i in range(21):
-    #     plt.plot(lane_polygon[:, i, 0], lane_polygon[:, i, 1], "m+", markersize=1)
-    
     plt.axis('equal')
     plt.xlim((-25, 25)) 
     plt.ylim((-25, 25)) 

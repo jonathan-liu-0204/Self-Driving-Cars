@@ -14,8 +14,8 @@ with open('config.yaml', 'r') as f:
     config = yaml.safe_load(f)
 _output_heads = int(config['net']['output_heads'])
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-print("Device: ", device)
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# print("Device: ", device)
 
 ''' Model
 '''

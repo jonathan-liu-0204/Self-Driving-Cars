@@ -64,7 +64,7 @@ class ArgoCriterion:
             'fde_1': fde_1,
             'ade_6_min': ade_6_min,
             'fde_6_min': fde_6_min,
-            'b_fde_6_min': fde_6_min,
+            'b_fde_6_min': b_fde_6_min,
         }
         return loss_dict
 
@@ -105,7 +105,8 @@ class Criterion(pl.LightningModule):
         '''
         Total Loss Structure
         '''
-        loss = ade + fde + CONF_ALPHA * maxmargin
+        #loss = ade + fde + CONF_ALPHA * maxmargin
+        loss = 0.5 * ade + 0.5 * fde + CONF_ALPHA * maxmargin
         loss_dict = {
             'total_loss': loss,
             'min_ade': ade,
