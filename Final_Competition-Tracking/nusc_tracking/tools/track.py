@@ -285,7 +285,7 @@ def main() -> None:
 
     from tracker import PubTracker
     tracker = PubTracker(
-        hungarian=False,
+        hungarian=True,
         max_age=args.max_age,
         active_th=args.active_th,
         min_hits=args.min_hits,

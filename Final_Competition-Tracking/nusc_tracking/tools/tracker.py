@@ -45,6 +45,7 @@ def greedy_assignment(dist):
     '''
     matched_indices = []
     ### Student implement ###
+    print(dist)
     # TODO
     raise NotImplementedError("Greedy algorithm not implemented yet!")
     ### Student implement ###
@@ -68,6 +69,7 @@ def comparing_positions(self, positions1_data, positions2_data, positions1, posi
         if self.hungarian:
             dist[dist > 1e18] = 1e18
             matched_indices = linear_sum_assignment(copy.deepcopy(dist))
+            matched_indices = reshape(matched_indices)
         else:
             matched_indices = greedy_assignment(copy.deepcopy(dist))
     else:  # first few frame

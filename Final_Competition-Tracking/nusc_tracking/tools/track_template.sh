@@ -11,7 +11,7 @@ active_th=1.0
 use_vel=0
 
 # Data and eval
-evaluate=0
+evaluate=1
 dataroot="data/nuscenes"
 split="val"
 out_dir="data/track_results"
