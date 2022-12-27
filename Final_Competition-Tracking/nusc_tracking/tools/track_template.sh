@@ -5,8 +5,8 @@ bbox_score=0.0
 tracker='PointTracker'
 min_hits=1
 max_age=6
-det_th=0.0
-del_th=0.0
+det_th=0
+del_th=0
 active_th=1.0
 use_vel=0
 

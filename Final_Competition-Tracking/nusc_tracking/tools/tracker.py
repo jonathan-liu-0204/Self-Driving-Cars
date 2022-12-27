@@ -22,16 +22,16 @@ NUSCENES_TRACKING_NAMES = [
 # This is an earlier statistics and I didn't spend much time tuning it.
 # Tune this for your model should provide some considerable AMOTA improvement
 NUSCENE_CLS_VELOCITY_ERROR = {
-    'car': 3,
-    'truck': 4,
-    'bus': 5.5,
-    'trailer': 2,
-    'pedestrian': 1,
-    'motorcycle': 4,
-    'bicycle': 2.5,
-    'construction_vehicle': 1,
-    'barrier': 1,
-    'traffic_cone': 1,
+    'car': 2.1,
+    'truck': 2.1,
+    'bus': 6.25,
+    'trailer': 5,
+    'pedestrian': 2,
+    'motorcycle': 3.875,
+    'bicycle': 2,
+    'construction_vehicle': 0,
+    'barrier': 0,
+    'traffic_cone': 0,
 }
 
 
@@ -45,9 +45,23 @@ def greedy_assignment(dist):
     '''
     matched_indices = []
     ### Student implement ###
-    print(dist)
     # TODO
-    raise NotImplementedError("Greedy algorithm not implemented yet!")
+
+    if dist.shape[1] == 0:
+        return np.array(matched_indices, np.int32).reshape(-1, 2)
+
+    # print(dist)
+    
+    # for i in range(dist.shape[0]):
+    #     print(dist[i])
+
+    for i in range(dist.shape[0]):
+        j = dist[i].argmin()
+        if dist[i][j] < 1e16:
+            dist[:, j] = 1e18
+            matched_indices.append([i, j])
+    
+    # raise NotImplementedError("Greedy algorithm not implemented yet!")
     ### Student implement ###
     return np.array(matched_indices, np.int32).reshape(-1, 2)
 
