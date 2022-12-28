@@ -22,16 +22,16 @@ NUSCENES_TRACKING_NAMES = [
 # This is an earlier statistics and I didn't spend much time tuning it.
 # Tune this for your model should provide some considerable AMOTA improvement
 NUSCENE_CLS_VELOCITY_ERROR = {
-    'car': 2.1,
-    'truck': 2.1,
-    'bus': 6.25,
+    'car': 2.125,
+    'truck': 2.125,
+    'bus': 6.4,
     'trailer': 5,
     'pedestrian': 2,
     'motorcycle': 3.875,
     'bicycle': 2,
-    'construction_vehicle': 0,
-    'barrier': 0,
-    'traffic_cone': 0,
+    'construction_vehicle': 1,
+    'barrier': 1,
+    'traffic_cone': 1,
 }
 
 
